@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="./src/output.css" rel="stylesheet" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <aside
+      id="sidebar"
+      class="fixed z-50 h-screen shadow-2xl -translate-x-full md:translate-x-0 bg-linear-to-bl from-blue-200 to-white duration-300 transition-all w-60 p-4"
+    >
+      <div class="flex items-top justify-between mb-5">
+        <div class="flex items-center gap-2">
+          <img class="rounded-full w-8" src="../images/logo.png" alt="" />
+          <h2 class="text-xl font-bold font-">NeuroAI</h2>
+        </div>
+        <!-- <button
+          onclick="toggleSidebar()"
+          class="md:hidden mb-4 p-2 bg-white rounded-lg shadow"
+        >
+          <i class="fa-solid fa-right-from-bracket rotate-180"></i>
+        </button> -->
+      </div>
+
+      <nav
+        class="flex flex-col gap-2 text-sm font-medium flex-1 overflow-y-auto border-t-2 border-gray-200 pt-5 w-[200px]"
+      >
+        <a
+          data-page="index"
+          href="./index.html"
+          class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700b g-gray-100 hover:text-white hover:bg-gray-700 active:color-white"
+        >
+          <i class="fa-lg fa-solid fa-house"></i> &nbsp; Dashboard</a
+        >
+        <a
+          data-page="analysis"
+          href="./pages/analysis.html"
+          class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700b g-gray-100 hover:text-white hover:bg-gray-700 active:color-white"
+        >
+          <i class="fa-lg fa-solid fa-brain"></i> &nbsp; Miya tasviri tahlili</a
+        >
+        <a
+          data-page="result"
+          href="./pages/result.html"
+          class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700b g-gray-100 hover:text-white hover:bg-gray-700 active:color-white"
+        >
+          <i class="fa-lg fa-solid fa-chart-line"></i> &nbsp; Natijalar</a
+        >
+        <a
+          data-page="contact"
+          href="./pages/contact.html"
+          class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700b g-gray-100 hover:text-white hover:bg-gray-700 active:color-white"
+        >
+          <i class="fa-lg fa-solid fa-circle-question"></i> &nbsp; FAQ</a
+        >
+        <a
+          data-page="profin"
+          href="./pages/profin.html"
+          class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700b g-gray-100 hover:text-white hover:bg-gray-700 active:color-white"
+        >
+          <i class="fa-lg fa-solid fa-user"></i> &nbsp; Profili</a
+        >
+        <a
+          data-page="statistics"
+          href="./pages/statistics.html"
+          class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700b g-gray-100 hover:text-white hover:bg-gray-700 active:color-white"
+        >
+          <i class="fa-lg fa-solid fa-chart-pie"></i> &nbsp; Statistika</a
+        >
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div
+      class="p-5 duration-300 transition-all md:ml-60 bg-linear-to-br from-blue-200 via-white to-white"
+    >
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <img class="rounded-full w-8" src="../images/logo.png" alt="" />
+          <h2 class="text-xl font-bold font-">NeuroAI</h2>
+        </div>
+        <label class="hamburger 
+        oncli">
+          <input type="checkbox" />
+          <svg viewBox="0 0 32 32">
+            <path
+              class="line line-top-bottom"
+              d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+            ></path>
+            <path class="line" d="M7 16 27 16"></path>
+          </svg>
+        </label>
+
+        <button
+          onclick="toggleSidebar()"
+          class="md:hidden p-2 hover:bg-gray-500 rounded-lg shadow"
+        ></button>
+      </div>
+      <!-- TITLE -->
+      <h1 class="text-[24px] font-bold leading-snug">
+        Diagnostika natijalarini real vaqtda kuzatib boring
+      </h1>
+
+      <p class="text-gray-600 text-sm mt-2 mb-5 leading-relaxed">
+        AI modeli bemorlar oqimi va klinik qarorlarni boshqarish uchun markaziy
+        nazorat paneli. Quyidagi statistika tizim sog‘lig‘i va tahlillar
+        ko‘rsatkichlarini aks ettiradi.
+      </p>
+
+      <!-- STATUS BADGES -->
+      <div class="flex items-center gap-3 mb-6">
+        <span
+          class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm flex items-center gap-2"
+        >
+          Yangilanish : 19:45
+        </span>
+
+        <span
+          class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm flex items-center gap-2"
+        >
+          <i class="fa-solid fa-rotate-right"></i> Yangilash
+        </span>
+      </div>
+
+      <!-- CARDS GRID -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <!-- CARD 1 -->
+        <div class="bg-white p-4 rounded-xl shadow-sm">
+          <i class="fa-solid fa-users text-[28px] text-blue-500 mb-2"></i>
+          <h2 class="text-[22px] font-bold">1 000</h2>
+          <p class="text-gray-600 text-sm mt-1">Aktiv bemorlar monitoringda</p>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="bg-white p-4 rounded-xl shadow-sm">
+          <i class="fa-solid fa-flask text-[28px] text-blue-500 mb-2"></i>
+          <h2 class="text-[22px] font-bold">10</h2>
+          <p class="text-gray-600 text-sm mt-1">So‘nggi 30 kunda o‘sish</p>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="bg-white p-4 rounded-xl shadow-sm">
+          <i class="fa-solid fa-chart-line text-[28px] text-blue-500 mb-2"></i>
+          <h2 class="text-[22px] font-bold">10</h2>
+          <p class="text-gray-600 text-sm mt-1">10% yakunlandi</p>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="bg-white p-4 rounded-xl shadow-sm">
+          <i
+            class="fa-solid fa-circle-exclamation text-[28px] text-red-500 mb-2"
+          ></i>
+          <h2 class="text-[22px] font-bold">0</h2>
+          <p class="text-gray-600 text-sm mt-1">0% nazorat talab etadi</p>
+        </div>
+      </div>
+
+      <!-- TREND BOX -->
+      <div
+        class="mt-4 relative flex w-full flex-col rounded-xl p-4 transition-all duration-300 hover:scale-[1.02]"
+      >
+        <div class="relative w-full">
+          <!-- Header -->
+          <div class="mb-4 flex items-center justify-between w-full">
+            <div class="flex items-center gap-2">
+              <div
+                class="flex h-8 w-8 items-center justify-center rounded-lg bg-linear-to-br from-indigo-500 to-purple-500"
+              >
+                <svg
+                  class="h-4 w-4 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-sm font-semibold text-gray-500">
+                Trend Analytics
+              </h3>
+              <p class="text-gray-500 text-xs mt-1">
+                Oxirgi 30 kun bo‘yicha tahlillar va to‘plamalar
+              </p>
+            </div>
+
+            <span
+              class="flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-1 text-xs font-medium text-emerald-500"
+            >
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+              Live
+            </span>
+          </div>
+          <!-- Stats -->
+          <div class="mb-4 grid grid-cols-2 gap-4 w-full">
+            <div class="rounded-lg bg-black p-3">
+              <p class="text-xs font-medium text-slate-400">Total Views</p>
+              <p class="text-lg font-semibold text-white">24.5K</p>
+              <span class="text-xs font-medium text-emerald-500">+12.3%</span>
+            </div>
+
+            <div class="rounded-lg bg-black p-3">
+              <p class="text-xs font-medium text-slate-400">Conversions</p>
+              <p class="text-lg font-semibold text-white">1.2K</p>
+              <span class="text-xs font-medium text-emerald-500">+8.1%</span>
+            </div>
+          </div>
+          <!-- Chart -->
+          <img
+            class="w-full h-96 hover:shadow-2xl border-2 border-gray-400 rounded-xl"
+            src="./images/diagram.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
