@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -11,164 +12,415 @@
       referrerpolicy="no-referrer"
     />
     <link href="../src/output.css" rel="stylesheet" />
-    <title>Dashboard</title>
+    <title>NeuroAI</title>
   </head>
 
-  <body class="bg-[#f4f7fb]">
-    <div class="flex min-h-screen">
-      <aside
-        id="sidebar"
-        class="bg-white shadow-md p-4 flex flex-col gap-6 w-60 max-[300px]:w-48 transition-all duration-300 fixed h-screen md:static z-50 -translate-x-full md:translate-x-0"
-      >
-        <div class="flex items-top justify-between">
-          <div class="flex items-center gap-2">
-            <img class="rounded-full w-8" src="../images/logo.png" alt="">
-            <h2 class="text-xl font-bold">NeuroAI</h2>
-          </div>
-          <button
-            onclick="toggleSidebar()"
-            class="md:hidden mb-4 p-2 bg-white rounded-lg shadow"
-          >
-            <!-- <i class="fa-solid fa-bars-staggered"></i> -->
-            <i class="fa-solid fa-right-from-bracket rotate-180"></i>
-          </button>
+  <body>
+    <aside
+      id="sidebar"
+      class="fixed z-50 h-screen shadow-2xl -translate-x-full md:translate-x-0 bg-linear-to-bl from-blue-200 to-white duration-300 transition-all w-60 p-4"
+    >
+      <div class="flex items-top justify-between mb-5">
+        <div class="flex items-center gap-2">
+          <img class="rounded-full w-8" src="../images/logo.png" alt="" />
+          <h2 class="text-xl font-bold font-">NeuroAI</h2>
         </div>
+      </div>
 
-        <nav
-          class="flex flex-col gap-2 text-sm font-medium flex-1 overflow-y-auto border-t-2 border-gray-200 pt-5"
-
-        >
-          <a
+      <nav
+        class="flex flex-col gap-2 text-sm font-medium flex-1 overflow-y-auto border-t-2 border-gray-200 pt-5 w-[200px]"
+      >
+        <a
           data-page="index"
-            href="../index.html"
-            class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700b g-gray-100 hover:text-white hover:bg-black active:color-white"
-          >
-            <i class="fa-lg fa-solid fa-house"></i> &nbsp; Dashboard</a
-          >
-          <a
-          data-page="analysis"
-            href="./analysis.html"
-            class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700b g-gray-100 hover:text-white hover:bg-black active:color-white"
-          >
-            <i class="fa-lg fa-solid fa-brain"></i> &nbsp; Miya tasviri
-            tahlili</a
-          >
-          <a
-          data-page="result"
-            href="./result.html"
-            class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700b g-gray-100 hover:text-white hover:bg-black active:color-white"
-          >
-            <i class="fa-lg fa-solid fa-chart-line"></i> &nbsp; Natijalar</a
-          >
-          <a
-          data-page="contact"
-            href="./contact.html"
-            class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700b g-gray-100 hover:text-white hover:bg-black active:color-white"
-          >
-            <i class="fa-lg fa-solid fa-circle-question"></i> &nbsp; FAQ</a
-          >
-          <a
-          data-page="profin"
-            href="./profin.html"
-            class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700b g-gray-100 hover:text-white hover:bg-black active:color-white"
-          >
-            <i class="fa-lg fa-solid fa-user"></i> &nbsp; Profili</a
-          >
-          <a
-          data-page="statistics"
-            href="./statistics.html"
-            class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700b g-gray-100 hover:text-white hover:bg-black active:color-white"
-          >
-            <i class="fa-lg fa-solid fa-chart-pie"></i> &nbsp; Statistika</a
-          >
-        </nav>
-      </aside>
-
-      <!-- MAIN CONTENT -->
-      <div class="flex-1 p-4 md:ml-60">
-        <!-- Mobile menu button -->
-        <button
-          onclick="toggleSidebar()"
-          class="md:hidden mb-4 p-2 bg-white rounded-lg shadow"
+          href="../index.html"
+          class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700 hover:text-white hover:bg-gray-700 active:color-white"
         >
-          <i class="fa-solid fa-bars-staggered"></i>
-        </button>
+          <i class="fa-lg fa-solid fa-house"></i> &nbsp; Dashboard</a
+        >
+        <a
+          data-page="analysis"
+          href="./analysis.html"
+          class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700 hover:text-white hover:bg-gray-700 active:color-white"
+        >
+          <i class="fa-lg fa-solid fa-brain"></i> &nbsp; Miya tasviri tahlili</a
+        >
+        <a
+          data-page="result"
+          href="./result.html"
+          class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700 hover:text-white hover:bg-gray-700 active:color-white"
+        >
+          <i class="fa-lg fa-solid fa-chart-line"></i> &nbsp; Natijalar</a
+        >
+        <a
+          data-page="contact"
+          href="./contact.html"
+          class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700 hover:text-white hover:bg-gray-700 active:color-white"
+        >
+          <i class="fa-lg fa-solid fa-circle-question"></i> &nbsp; FAQ</a
+        >
+        <a
+          data-page="profin"
+          href="./profin.html"
+          class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700 hover:text-white hover:bg-gray-700 active:color-white"
+        >
+          <i class="fa-lg fa-solid fa-user"></i> &nbsp; Profili</a
+        >
+      </nav>
+    </aside>
 
-        <div class="bg-white p-4 rounded-xl shadow">
-          <!-- Header -->
-          <div class="flex justify-between items-center mb-4">
-            <h1 class="text-2xl font-bold">Tahlillar boshqaruvi</h1>
+    <div
+      class="p-5 duration-300 transition-all md:ml-60 bg-linear-to-br from-blue-200 via-white to-white min-h-screen"
+    >
+      <div
+        class="md:hidden fixed left-0 top-0 py-2 px-5 w-full bg-blue-100 duration-300"
+      >
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <img class="rounded-full w-8" src="../images/logo.png" alt="" />
+            <h2 class="text-xl font-bold font-">NeuroAI</h2>
+          </div>
+          <label class="hamburger">
+            <input onchange="toggleSidebar()" type="checkbox" />
+            <svg class="w-8" viewBox="0 0 32 32">
+              <path
+                class="line line-top-bottom"
+                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+              ></path>
+              <path class="line" d="M7 16 27 16"></path>
+            </svg>
+          </label>
+        </div>
+      </div>
+
+      <div class="pt-16 md:pt-0 flex flex-col gap-4">
+        <!-- Profil kartasi -->
+        <div
+        style="display: flex; flex-direction: column;" id="myDiv"
+          class="bg-white/70 p-5 rounded-2xl shadow-2xl border border-white/40 backdrop-blur gap-4 md:items-center md:justify-between"
+        >
+          <div class="flex items-center gap-4">
+            <img
+              class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border-2 border-blue-300 shadow"
+              src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?semt=ais_se_enriched&w=740&q=80"
+              alt="Profil rasmi"
+            />
+            <div class="space-y-1 text-sm">
+              <p class="text-xs uppercase tracking-wide text-gray-500">
+                Foydalanuvchi ma’lumotlari
+              </p>
+              <p class="text-lg font-semibold">
+                <span id="profileFullName">FIO kiritilmagan</span>
+              </p>
+              <p class="text-gray-600">
+                Email:
+                <span id="profileEmail" class="font-medium text-gray-800"
+                  >—</span
+                >
+              </p>
+              <p class="text-gray-600">
+                Tel:
+                <span id="profilePhone" class="font-medium text-gray-800"
+                  >—</span
+                >
+              </p>
+              <p class="text-gray-600">
+                Manzil:
+                <span id="profileAddress" class="font-medium text-gray-800"
+                  >—</span
+                >
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-2 sm:items-center">
             <button
-              class="px-4 py-2 bg-gradient-to from-purple-500 to-pink-500 text-white rounded-xl text-sm"
+              data-modal-target="loginModal"
+              class="px-4 py-2 rounded-lg text-sm shadow w-full"
             >
-              Yangi tahlil yuklash
+              Login
+            </button>
+            <button
+              data-modal-target="registerModal"
+              class="px-4 py-2 rounded-lg text-sm shadow w-full"
+            >
+              Ro‘yxatdan o‘tish
+            </button>
+            <button
+              data-modal-target="editModal"
+              class="px-4 py-2 rounded-lg text-sm shadow w-full"
+            >
+              Profilni tahrirlash
+            </button>
+            <button
+              data-modal-target="logoutModal"
+              class="px-4 py-2 rounded-lg text-sm shadow w-full"
+            >
+              Log out
             </button>
           </div>
+        </div>
 
-          <!-- Search -->
-          <input
-            class="w-full p-3 rounded-lg bg-gray-100 mb-3 text-sm"
-            placeholder="ID, label yoki kategoriya bo’yicha qidirish..."
-          />
+        <!-- Qo‘shimcha ma’lumot kartalari -->
+        <div class="grid gap-4 md:grid-cols-2">
+          <div
+            class="bg-white/70 p-4 rounded-2xl shadow-2xl border border-white/40 backdrop-blur space-y-2 text-sm"
+          >
+            <p class="text-xs uppercase tracking-wide text-gray-500">
+              Profil holati
+            </p>
+            <p class="font-semibold text-gray-900">
+              Oxirgi yangilanish:
+              <span id="profileUpdatedAt" class="font-normal text-gray-700"
+                >—</span
+              >
+            </p>
+            <p class="text-gray-600">
+              Ro‘yxatdan o‘tgan holat:
+              <span
+                id="profileStatus"
+                class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-50 text-yellow-700"
+              >
+                Ro'yxatdan o‘tmagan
+              </span>
+            </p>
+          </div>
 
-          <!-- Filter -->
-          <select class="w-full p-3 bg-gray-100 rounded-lg mb-4 text-sm">
-            <option>Barcha statuslar</option>
-          </select>
-
-          <!-- List -->
-          <div class="flex flex-col gap-3">
-            <!-- Single item -->
-            <!-- 10 ta bir xil qilib qo'ydim -->
-            <!-- Loopning HTML versiyasi -->
-            <!-- ================ -->
-            <!-- You can copy 10 times -->
-            <div class="bg-white shadow p-4 rounded-xl border">
-              <h2 class="font-semibold">Tahlil #10</h2>
-              <p class="text-gray-500 text-sm">Natija kutilmoqda</p>
-              <p class="text-gray-400 text-xs">14-noy, 06:36 • 0 toplama</p>
-
-              <div class="flex gap-3 mt-2 text-sm">
-                <button class="px-3 py-1 bg-gray-100 rounded-lg">
-                  Ko'rish
-                </button>
-                <button class="px-3 py-1 bg-red-100 text-red-600 rounded-lg">
-                  O'chirish
-                </button>
-                <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-lg"
-                  >Kutilmoqda</span
-                >
-              </div>
-            </div>
-
-            <!-- COPY SAME BLOCK 9 MORE TIMES -->
-            <!-- Example (Tahlil #9) -->
-            <div class="bg-white shadow p-4 rounded-xl border">
-              <h2 class="font-semibold">Tahlil #9</h2>
-              <p class="text-gray-500 text-sm">Natija kutilmoqda</p>
-              <p class="text-gray-400 text-xs">14-noy, 06:36 • 0 toplama</p>
-
-              <div class="flex gap-3 mt-2 text-sm">
-                <button class="px-3 py-1 bg-gray-100 rounded-lg">
-                  Ko'rish
-                </button>
-                <button class="px-3 py-1 bg-red-100 text-red-600 rounded-lg">
-                  O'chirish
-                </button>
-                <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-lg"
-                  >Kutilmoqda</span
-                >
-              </div>
-            </div>
-
-            <!-- Hamma testlar shu format bo‘ladi -->
+          <div
+            class="bg-white/70 p-4 rounded-2xl shadow-2xl border border-white/40 backdrop-blur text-sm space-y-2"
+          >
+            <p class="text-xs uppercase tracking-wide text-gray-500">
+              Eslatma
+            </p>
+            <p class="text-gray-700">
+              Foydalanuvchi ma’lumotlari faqat tahlil natijalari va profil
+              tajribasini yaxshilash uchun saqlanadi. Istalgan vaqtda
+              ma’lumotlarni o‘zgartirishingiz yoki o‘chirishingiz mumkin.
+            </p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Mobile sidebar JS -->
-    
+    <!-- Login modal -->
+    <div
+      id="loginModal"
+      data-modal="loginModal"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40"
+    >
+      <div
+        class="w-full max-w-md mx-4 rounded-2xl bg-white p-5 shadow-2xl space-y-4"
+      >
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-semibold">Login</h2>
+          <button
+            data-modal-close="loginModal"
+            class="text-gray-400 hover:text-gray-600"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <p class="text-sm text-gray-600">
+          Akkauntingizga kirish uchun email va parolni kiriting.
+        </p>
+        <form id="loginForm" class="space-y-3">
+          <div class="space-y-1 text-sm">
+            <label class="block font-medium">Email</label>
+            <input
+              type="email"
+              class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="example@clinic.uz"
+            />
+          </div>
+          <div class="space-y-1 text-sm">
+            <label class="block font-medium">Parol</label>
+            <input
+              type="password"
+              class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="••••••••"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full mt-2 rounded-lg bg-gray-900 text-white py-2 text-sm font-medium hover:opacity-90"
+          >
+            Kirish
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Register modal -->
+    <div
+      id="registerModal"
+      data-modal="registerModal"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40"
+    >
+      <div
+        class="w-full max-w-md mx-4 rounded-2xl bg-white p-5 shadow-2xl space-y-4"
+      >
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-semibold">Ro‘yxatdan o‘tish</h2>
+          <button
+            data-modal-close="registerModal"
+            class="text-gray-400 hover:text-gray-600"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <p class="text-sm text-gray-600">
+          Quyidagi ma’lumotlarni to‘ldiring. Hozircha ma’lumotlar faqat brauzer
+          ichida saqlanadi (demo).
+        </p>
+        <form id="registerForm" class="space-y-3">
+          <div class="space-y-1 text-sm">
+            <label class="block font-medium">FIO</label>
+            <input
+              id="inputFullName"
+              type="text"
+              class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Ism Familiya"
+            />
+          </div>
+          <div class="space-y-1 text-sm">
+            <label class="block font-medium">Email</label>
+            <input
+              id="inputEmail"
+              type="email"
+              class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="example@clinic.uz"
+            />
+          </div>
+          <div class="space-y-1 text-sm">
+            <label class="block font-medium">Telefon</label>
+            <input
+              id="inputPhone"
+              type="tel"
+              class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="+998 90 123 45 67"
+            />
+          </div>
+          <div class="space-y-1 text-sm">
+            <label class="block font-medium">Manzil</label>
+            <input
+              id="inputAddress"
+              type="text"
+              class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Toshkent, Yunusobod..."
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full mt-2 rounded-lg bg-blue-600 text-white py-2 text-sm font-medium hover:bg-blue-700"
+          >
+            Saqlash
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Edit modal -->
+    <div
+      id="editModal"
+      data-modal="editModal"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40"
+    >
+      <div
+        class="w-full max-w-md mx-4 rounded-2xl bg-white p-5 shadow-2xl space-y-4"
+      >
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-semibold">Profilni tahrirlash</h2>
+          <button
+            data-modal-close="editModal"
+            class="text-gray-400 hover:text-gray-600"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <p class="text-sm text-gray-600">
+          Avval saqlangan ma’lumotlarni yangilash uchun maydonlarni o‘zgartiring.
+        </p>
+        <form id="editForm" class="space-y-3">
+          <div class="space-y-1 text-sm">
+            <label class="block font-medium">FIO</label>
+            <input
+              id="editFullName"
+              type="text"
+              class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div class="space-y-1 text-sm">
+            <label class="block font-medium">Email</label>
+            <input
+              id="editEmail"
+              type="email"
+              class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div class="space-y-1 text-sm">
+            <label class="block font-medium">Telefon</label>
+            <input
+              id="editPhone"
+              type="tel"
+              class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div class="space-y-1 text-sm">
+            <label class="block font-medium">Manzil</label>
+            <input
+              id="editAddress"
+              type="text"
+              class="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full mt-2 rounded-lg bg-amber-500 text-black border py-2 text-sm font-medium hover:bg-amber-600"
+          >
+            Yangilash
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Logout modal -->
+    <div
+      id="logoutModal"
+      data-modal="logoutModal"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40"
+    >
+      <div
+        class="w-full max-w-sm mx-4 rounded-2xl bg-white p-5 shadow-2xl space-y-4"
+      >
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-semibold">Tizimdan chiqish</h2>
+          <button
+            data-modal-close="logoutModal"
+            class="text-gray-400 hover:text-gray-600"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <p class="text-sm text-gray-600">
+          Haqiqatan ham tizimdan chiqmoqchimisiz? Demo rejimida faqat brauzerda
+          saqlangan profil tozalanadi.
+        </p>
+        <div class="flex gap-2 justify-end">
+          <button
+            data-modal-close="logoutModal"
+            class="px-4 py-2 rounded-lg border border-gray-300 text-sm text-gray-800 bg-white hover:bg-gray-50"
+          >
+            Bekor qilish
+          </button>
+          <button
+            id="confirmLogout"
+            class="px-4 py-2 rounded-lg bg-red-500 text-white text-sm hover:bg-red-600"
+          >
+            Chiqish
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script src="../main.js"></script>
   </body>
 </html>
+

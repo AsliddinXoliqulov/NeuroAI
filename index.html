@@ -16,7 +16,7 @@
       referrerpolicy="no-referrer"
     />
     <link href="./src/output.css" rel="stylesheet" />
-    <title>Dashboard</title>
+    <title>NeuroAI</title>
   </head>
   <body>
     <aside
@@ -28,12 +28,7 @@
           <img class="rounded-full w-8" src="../images/logo.png" alt="" />
           <h2 class="text-xl font-bold font-">NeuroAI</h2>
         </div>
-        <!-- <button
-          onclick="toggleSidebar()"
-          class="md:hidden mb-4 p-2 bg-white rounded-lg shadow"
-        >
-          <i class="fa-solid fa-right-from-bracket rotate-180"></i>
-        </button> -->
+   
       </div>
 
       <nav
@@ -74,13 +69,6 @@
         >
           <i class="fa-lg fa-solid fa-user"></i> &nbsp; Profili</a
         >
-        <a
-          data-page="statistics"
-          href="./pages/statistics.html"
-          class="px-4 flex items-center justify-start py-2 rounded-lg text-gray-700b g-gray-100 hover:text-white hover:bg-gray-700 active:color-white"
-        >
-          <i class="fa-lg fa-solid fa-chart-pie"></i> &nbsp; Statistika</a
-        >
       </nav>
     </aside>
 
@@ -88,15 +76,14 @@
     <div
       class="p-5 duration-300 transition-all md:ml-60 bg-linear-to-br from-blue-200 via-white to-white"
     >
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between md:hidden bg-blue-100 fixed left-0 top-0 w-full duration-300 py-2 px-5">
         <div class="flex items-center gap-2">
           <img class="rounded-full w-8" src="../images/logo.png" alt="" />
           <h2 class="text-xl font-bold font-">NeuroAI</h2>
         </div>
-        <label class="hamburger 
-        oncli">
-          <input type="checkbox" />
-          <svg viewBox="0 0 32 32">
+        <label class="hamburger">
+          <input type="checkbox" id="burger" onchange="toggleSidebar()" />
+          <svg class="w-8" viewBox="0 0 32 32">
             <path
               class="line line-top-bottom"
               d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
@@ -104,14 +91,15 @@
             <path class="line" d="M7 16 27 16"></path>
           </svg>
         </label>
-
+        
+<!-- 
         <button
           onclick="toggleSidebar()"
           class="md:hidden p-2 hover:bg-gray-500 rounded-lg shadow"
-        ></button>
+        ></button> -->
       </div>
       <!-- TITLE -->
-      <h1 class="text-[24px] font-bold leading-snug">
+      <h1 class="text-[24px] font-bold leading-snug pt-16 md:pt-0 duration-300">
         Diagnostika natijalarini real vaqtda kuzatib boring
       </h1>
 
